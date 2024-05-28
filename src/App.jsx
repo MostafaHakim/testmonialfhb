@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import Testmonial from './components/Testmonial';
+import StudentForm from './components/StundentForm';
 
 
 const App = () => {
@@ -23,27 +24,15 @@ const App = () => {
     setStudentRoll(e.target.value)
   }
   return (
-    <div className='flex flex-col items-center'>
-      <div ref={testimonialRef}>
+    <div className='grid grid-cols-5 gap-4 items-center justify-center'>
+      <div className='col-span-4' ref={testimonialRef}>
         <Testmonial stdName={studentName} stdGpa={studentGpa} stdRoll={studentRoll} />
       </div>
-      <button className='px-6 py-2 bg-white border-2 border-green-700 rounded-xl hover:bg-gray-400 text-xl' onClick={handlePrint} style={{ margin: '20px', padding: '10px 20px' }}>
-        Print
-      </button>
-      <form>
-        <div className='flex flex-col m-8'>
-          <label htmlFor="stdName">Full Name</label>
-          <input type="text" id='stdName' className='bg-white p-2' value={studentName} onChange={handleChangeName} />
-        </div>
-        <div className='flex flex-col m-8'>
-          <label htmlFor="gpa">GPA</label>
-          <input type="text" id='gpa' className='bg-white p-2' value={studentGpa} onChange={handleChangeGpa} />
-        </div>
-        <div className='flex flex-col m-8'>
-          <label htmlFor="roll">Roll No</label>
-          <input type="text" id='roll' className='bg-white p-2' value={studentRoll} onChange={handleChangeRoll} />
-        </div>
-      </form>
+      <div className='col-span-1 bg-sky-400 flex flex-col items-center'>
+        <StudentForm stdNameHdl={handleChangeName} stdGpaHdl={handleChangeGpa} stdRollHdl={handleChangeRoll} stdName={studentName} stdGpa={studentGpa} stdRoll={studentRoll} />
+        <button className='bg-orange-400 py-2 px-4 hover:bg-orange-600' onClick={handlePrint}>Print</button>
+      </div>
+
     </div>
   );
 };

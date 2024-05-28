@@ -7,7 +7,7 @@ const Testmonial = ({ stdName, stdGpa, stdRoll }) => {
                     <div className=" flex flex-col items-center justify-start bg-gradient-to-b from-blue-300 to-orange-100 border-2 border-white w-full h-full">
                         <div className="flex flex-col items-center justify-center mt-8">
                             <div>
-                                <h1 className="text-6xl font-poppinsBold">FOZLUL HAQUE BIDHYA NIKETON</h1>
+                                <h1 className="text-6xl font-poppinsBold">FAZLUL HAQUE BIDHYANIKETON</h1>
                             </div>
                             <span className="text-xl mt-2">205 Ashkona, Medical Road, Dokkhinkhan, Dhaka 1230</span>
                         </div>
@@ -26,13 +26,3 @@ const Testmonial = ({ stdName, stdGpa, stdRoll }) => {
 
 export default Testmonial;
 
-{/* <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">School Testimonial</h2>
-            <div className="border-t border-gray-200 pt-4">
-                <p className="text-gray-700 text-lg italic">
-                    "Completing my SSC at this esteemed school was an incredible experience. The dedication and support
-                    of the teachers helped me achieve excellent results. The facilities and learning environment are
-                    unparalleled. I highly recommend this school to anyone looking for a strong foundation for their future."
-                </p>
-                <p className="text-gray-900 font-semibold text-right mt-4">- John Doe</p>
-                <p className="text-gray-600 text-right">Class of 2024</p>
-            </div> */}
